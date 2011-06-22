@@ -1,0 +1,31 @@
+Metadata-Version: 1.0
+Name: experimental.cssselect
+Version: 0.1
+Summary: Experimental version of lxml.cssselect
+Home-page: https://github.com/lrowe/lxml
+Author: Laurence Rowe
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: ======================
+        experimental.cssselect
+        ======================
+        
+        This package contains an experimental fork of the lxml.cssselect module. The
+        lxml fork with the same changes is http://github.com/lrowe/lxml
+        
+        
+        Changes
+        =======
+        
+        0.1 2011-03-23
+        --------------
+        
+        * In lxml.cssselect, use the xpath 'A//B' (short for
+          'A/descendant-or-self::node()/B') instead of 'A/descendant::B' for the css
+          descendant selector ('A B'). This makes a few edge cases to be consistent
+          with the selector behavior in WebKit and Firefox, and makes more css
+          expressions valid location paths (for use in xsl:template match).
+        
+        * Fork from lxml 2.3
+        
+Platform: UNKNOWN

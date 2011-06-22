@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* Reset | Eric Meyer's Reset (compressed)
+ *---------------------------------------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}:focus{outline:0;}ins{text-decoration:none;}del{text-decoration:line-through;}table{border-collapse:collapse;border-spacing:0;}.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}.clearfix{*zoom:1;}
+
+/* Colors
+ *---------------------------------------------------------------*/
+
+/* Typography
+ *---------------------------------------------------------------*/
+body { font: 0.8em Trebuchet MS, Arial, sans-serif; line-height: 1.7; }
+h1, h2, h3, h4, h5, h6 { }
+h1 { font-size: 2.2em; }
+h2 { font-size: 2.0em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; }
+img { border: 7px #fff solid; border-radius: 10px; border-top-left-radius: 0; -webkit-border-radius: 10px; -webkit-border-top-left-radius: 0; -moz-border-radius: 10px; -moz-border-radius-topleft: 0; width: 200px; }
+img.align-right { float: right; margin: 1em 0 0.5em 1em; }
+img.align-left { float: left; margin: 1em 1em 0.5em 0; }
+img.align-center { display: block; margin: 1em auto; width: 100px; }
+p { margin: 0.5em 0; }
+.darker-green { background: #435D36; }
+
+/* Structure structure
+ *---------------------------------------------------------------*/
+	
+	/* Status Blocks
+ 	 *---------------------------------------------------------------*/
+	.status-block { display: none; }
+	.status-error { }
+	.status-success { }
+	
+	/* Defaults
+ 	 *---------------------------------------------------------------*/
+	body { background: #fff; color: #222; }
+	body.mode1 { }
+	body.mode2 { }
+	body.mode3 { }
+	
+	/* Wrapper Structure
+ 	 *---------------------------------------------------------------*/
+	#wrapper { width: 1000px; margin: 0 auto; }
+	#wrapper.mode1 { }
+	#wrapper.mode2 { }
+	#wrapper.mode3 { }
+	
+	/* Site Header Structure
+ 	 *---------------------------------------------------------------*/
+	#wrapper #site-header { margin: 20px 0 20px 0; }
+	#wrapper #site-header #header-group { }
+	#wrapper #site-header #header-group h1 { }
+	#wrapper #site-header #header-group h1.primary-site-header { float: left; }
+	#wrapper #site-header #header-group h1 a { padding: 20px; width: 960px; background: #7F9A65; color: #fff; text-decoration: none; display: block; border-radius: 10px; border-bottom-right-radius: 0; border-top-left-radius: 0; -webkit-border-radius: 10px; -webkit-border-bottom-right-radius: 0; -webkit-border-top-left-radius: 0; -moz-border-radius: 10px; -moz-border-radius-bottomright: 0; -moz-border-radius-topleft: 0; }
+	#wrapper #site-header #header-group h1 a:hover { background: #333; }
+	#wrapper #site-header #header-group h2 { }
+	#wrapper #site-header #header-group h2.secondary-site-header { float: left; clear: left; width: 960px; padding: 0 20px; }
+	#wrapper #site-header #header-group p { }
+	#wrapper #site-header #header-group p.site-description { float: left; width: 960px; padding: 20px; background: #efefef; border-radius: 10px; border-bottom-right-radius: 0; border-top-left-radius: 0; -webkit-border-radius: 10px; -webkit-border-bottom-right-radius: 0; -webkit-border-top-left-radius: 0; -moz-border-radius: 10px; -moz-border-radius-bottomright: 0; -moz-border-radius-topleft: 0; }
+	
+	/* Nav Structure
+	 *---------------------------------------------------------------*/
+	#wrapper #site-nav { clear: both; background: #fff; border: 1px #ccc solid; border-top-left-radius: 10px; border-top-right-radius: 10px; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; }
+	#wrapper #site-nav ul { }
+	#wrapper #site-nav ul li:first-child { margin-bottom: 0; }
+	#wrapper #site-nav ul li { float: left; }
+	#wrapper #site-nav ul li h1 { background: #7F9A65; border-radius: 10px; border-bottom-right-radius: 0; -webkit-border-top-left-radius: 0; -webkit-border-radius: 10px; -webkit-border-bottom-right-radius: 0; -webkit-border-top-left-radius: 0; -moz-border-radius: 10px; -moz-border-radius-bottomright: 0; -moz-border-radius-topleft: 0; font-size: 1em; line-height: 1; padding: 10px; margin: 10px; color: #fff; }
+	#wrapper #site-nav ul li p { margin-bottom: 0; color: #999; padding: 0 15px 5px 15px; border-bottom: 1px #efefef solid; width: 175px; }
+	#wrapper #site-nav ul li a { display: block; width: auto; height: 20px; padding: 10px; text-decoration: none; color: #333; }
+	#wrapper #site-nav ul li a:hover { color: #7F9A65; }
+	#wrapper #site-nav > ul > li > a { text-align: center; }
+	#wrapper #site-nav ul li ul { display: none; }
+	#wrapper #site-nav ul li:hover a { color: #7F9A65; }
+	#wrapper #site-nav ul li:hover ul { margin: 0 0 0 -1px; display: block; position: absolute; background: #fff; border: 1px #ccc solid; border-top: none; -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; }
+	#wrapper #site-nav ul li ul li { float: left; clear: left; width: 100%; }
+	#wrapper #site-nav ul li ul li a { height: auto; padding: 10px; color: #333 !important; }
+	#wrapper #site-nav ul li ul li:last-child a { -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; }
+	#wrapper #site-nav ul li ul li a:hover { background: #7F9A65; color: #fff !important; }
+	
+	/* Page Structure
+ 	 *---------------------------------------------------------------*/
+	#wrapper #site-content { padding: 20px; border-top: 1px #efefef solid; background: #efefef; margin: 0 0 20px 0; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; -moz-border-radius-bottomleft: 10px; }
+	
+	#wrapper #site-content #page-header { }
+	#wrapper #site-content #page-header h1 { }
+	
+	#wrapper #site-content #page-section { float: left; width: 725px; margin: 0 10px 0 0; }
+	#wrapper #site-content #page-section div.content { }
+	
+	#wrapper #site-content #page-aside { float: left; width: 200px; border-left: 1px #efefef solid; padding: 0 0 0 20px; }
+	#wrapper #site-content #page-aside div.content { }
+	#wrapper #site-content #page-aside div.content div.aside-block { border: 1px #fff solid; background: #fff; margin: 0 0 20px 0; border-radius: 10px; border-top-left-radius: 0; -webkit-border-radius: 10px; -webkit-border-top-left-radius: 0; -moz-border-radius: 10px; -moz-border-radius-topleft: 0; }
+	#wrapper #site-content #page-aside div.content div.aside-block:hover { border: 1px #ccc solid; }
+	#wrapper #site-content #page-aside div.content div.aside-block:hover div.aside-header { background: #333; }
+	#wrapper #site-content #page-aside div.content div.aside-block div.aside-header { padding: 0 5px; background: #7F9A65; color: #fff; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-top-left-radius: 0; -webkit-border-bottom-left-radius: 10px; -webkit-border-top-right-radius: 10px; -webkit-border-top-left-radius: 0; -moz-border-radius: 10px; -moz-border-radius-topleft: 0; border: 5px #fff solid; }
+	#wrapper #site-content #page-aside div.content div.aside-block div.aside-header h1 { }
+	#wrapper #site-content #page-aside div.content div.aside-block div.aside-content { padding: 1em; color: #999; }
+	#wrapper #site-content #page-aside div.content div.aside-block div.aside-content p { }
+	
+	/* Footer Structure
+ 	 *---------------------------------------------------------------*/
+	#wrapper #site-footer { clear: both; padding: 20px; margin: 0 0 30px 0; background: #7F9A65; color: #fff; border-radius: 10px; border-bottom-right-radius: 0; border-top-left-radius: 0; -webkit-border-radius: 10px; -webkit-border-bottom-right-radius: 0; -webkit-border-top-left-radius: 0; -moz-border-radius: 10px; -moz-border-radius-bottomright: 0; -moz-border-radius-topleft: 0; }
+	#wrapper #site-footer div.content { }
+	#wrapper #site-footer div.content p { }
+	#wrapper #site-footer div.content p.copyright { float: right; padding: 0.5em 0.7em; margin: 1em 0 2em 0; border-radius: 10px; border-bottom-right-radius: 0; border-top-left-radius: 0; -webkit-border-radius: 10px; -webkit-border-bottom-right-radius: 0; -webkit-border-top-left-radius: 0; -moz-border-radius: 10px; -moz-border-radius-bottomright: 0; -moz-border-radius-topleft: 0; text-align: right; }

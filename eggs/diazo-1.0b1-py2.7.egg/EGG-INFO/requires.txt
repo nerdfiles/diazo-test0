@@ -1,0 +1,12 @@
+setuptools
+lxml
+experimental.cssselect
+
+[test]
+repoze.xmliter
+WebOb
+unittest2
+
+[wsgi]
+repoze.xmliter
+WebOb

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rules 
+    xmlns="http://namespaces.plone.org/diazo" 
+    xmlns:css="http://namespaces.plone.org/diazo/css" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- Prevent theme usage in zmi-->
+    <rules css:if-content="#visual-portal-wrapper">
+        <theme href="index.html" />
+    </rules>
+
+    <!--replace content="/html/head/title" theme="/html/head/title" /-->
+    <!--replace content="/html/head/base" theme="/html/head/base" /-->
+    <!--replace content="/html/head/meta" theme="/html/head/meta" /-->
+    <!--prepend content='/html/head' theme='/html/head' /-->
+
+    <!--copy attributes="href title" css:content='#portal-logo' css:theme='#logo h1 a' /-->
+    <copy 
+        css:content="body"
+        css:theme="body" 
+        attributes="class" />
+        
+    <copy 
+        content='//*[@id="portal-globalnav"]' 
+        theme='//*[@id="nav"]' />
+
+    <drop 
+        attributes="id" 
+        css:content="#portal-globalnav" />
+
+    <prepend 
+        content='//*[@id="portal-personaltools-wrapper"]' 
+        theme='//*[@id="nav"]' />
+
+    <copy 
+        content='//*[@id="portal-column-content"]' 
+        theme='//*[@id="content"]' />
+
+    <drop 
+        attributes="class" 
+        css:content="#portal-column-content" />
+
+    <copy 
+        content='//*[@id="portal-column-one"]' 
+        theme='//*[@id="sidebar"]' />
+
+    <prepend 
+        content='//*[@id="portal-searchbox"]' 
+        theme='//*[@id="sidebar"]' />
+
+    <drop 
+        attributes="class" 
+        css:content="#portal-column-one"/>
+    
+    <copy 
+        content='//*[@id="portal-footer"]' 
+        theme='//*[@id="footer"]' />
+    
+    <append 
+        content='//*[@id="portal-colophon"]' 
+        theme='//*[@id="footer"]' />
+    
+    <append 
+        content='//*[@id="portal-siteactions"]' 
+        theme='//*[@id="footer"]' />
+    
+    <!--copy content='//*[@id="portal-logo"]' theme='//*[@id="logo"]' /-->
+
+
+</rules>
