@@ -1,4 +1,4 @@
-Theme Development for Ploud
+Theme Development for Plone, using diazo theme framework
 ===
 
 Themes in progress:
