@@ -1,29 +1,78 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rules 
-    xmlns="http://namespaces.plone.org/diazo" 
-    xmlns:css="http://namespaces.plone.org/diazo/css" 
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns="http://namespaces.plone.org/diazo" 
+  xmlns:css="http://namespaces.plone.org/diazo/css" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:fn="http://www.w3.org/2005/xpath-functions">
 
-    <!-- Prevent theme usage in zmi-->
-    <rules css:if-content="#visual-portal-wrapper">
-        <theme href="index.html" />
+  <notheme if-path="/_assets" />
+    
+  <!-- Prevent theme usage in zmi-->
+  <rules css:if-content="#visual-portal-wrapper">
+    
+    <!-- Base -->
+    <theme href="index.html" />
+    
+    <!-- Sections -->
+    <rules content='//*body[@class*="section-"]'>
+      <theme href="section.html" />
     </rules>
+    
+  </rules>
 
     <!--replace content="/html/head/title" theme="/html/head/title" /-->
     <!--replace content="/html/head/base" theme="/html/head/base" /-->
     <!--replace content="/html/head/meta" theme="/html/head/meta" /-->
     <!--prepend content='/html/head' theme='/html/head' /-->
 
-    <!--copy attributes="href title" css:content='#portal-logo' css:theme='#logo h1 a' /-->
+    <!--copy attributes="href title" css:content='#portal-logo' css:theme='.primary-site-header a' /-->
+    
+    <replace css:content="#content" css:theme="#page-section .content" />
+    
     <copy 
         css:content="body"
         css:theme="body" 
         attributes="class" />
         
     <copy 
-        content='//*[@id="portal-globalnav"]' 
-        theme='//*[@id="nav"]' />
+      content='//*[@id="portal-globalnav"]' 
+      theme='//*[@id="site-nav"]/ul' />
+    
+    <replace css:theme='#site-nav ul'>
+    
+      <!-- Internal Globals -->    
+      <xsl:variable name="smallcase" select="'abcdefghijklmnopqrstuvwxyz'" />
+      <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
+      <xsl:variable name="host" select="'http://diazo1.ploud.net/'" />
 
+      <ul>
+        <xsl:for-each css:select="#portal-globalnav > li">
+          <li>
+            <xsl:element name="a">
+              <xsl:choose>
+                <xsl:when test='contains(./a/@href, $host)'>
+                    <xsl:attribute name="href">    
+                      <xsl:value-of select='substring-after(./a/@href, "http://diazo1.ploud.net")' />/
+                    </xsl:attribute>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:attribute name="href">    
+                      <xsl:text>/</xsl:text>
+                    </xsl:attribute>                
+                </xsl:otherwise>
+              </xsl:choose>
+              <xsl:value-of select="a/text()" />
+            </xsl:element>
+          </li>
+        </xsl:for-each>
+      </ul>
+      
+    </replace>
+    
+    <!-- Fix below -->
+
+    <!-->
     <drop 
         attributes="id" 
         css:content="#portal-globalnav" />
@@ -63,6 +112,8 @@
     <append 
         content='//*[@id="portal-siteactions"]' 
         theme='//*[@id="footer"]' />
+        
+    -->
     
     <!--copy content='//*[@id="portal-logo"]' theme='//*[@id="logo"]' /-->
 
