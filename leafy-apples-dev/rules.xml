@@ -15,9 +15,9 @@
     <theme href="index.html" />
     
     <!-- Sections -->
-    <rules content='//*body[@class*="section-"]'>
+    <!--rules content='//*body[@class*="section-"]'>
       <theme href="section.html" />
-    </rules>
+    </rules-->
     
   </rules>
 
@@ -29,6 +29,14 @@
     <!--copy attributes="href title" css:content='#portal-logo' css:theme='.primary-site-header a' /-->
     
     <replace css:content="#content" css:theme="#page-section .content" />
+    
+    <replace css:content="#viewlet-above-content" css:theme="#before-content" />
+    
+    <replace content='//*[@id="portal-footer"]/p' theme='//*[@id="site-footer"]/div/div[contains(@class,"copyright")]/p' />
+    
+    <copy content='//*[@id="portal-colophon"]/div/ul' theme='//*[@id="site-colophon"]' />
+    
+    <copy content='//*[@id="portal-siteactions"]' theme='//*[@id="site-siteactions"]' />
     
     <copy 
         css:content="body"

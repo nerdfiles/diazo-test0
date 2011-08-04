@@ -1,8 +1,8 @@
 3.1.5 (Brainy Betty)
-5dece1cebe04f9c1603ace7f4e0c6b0ffe6d848c
+b4a5ad97b483c369b70977578ee26204c0cee2b3
 o:Sass::Tree::RootNode
 :
-@linei:@template"O#@charset "utf-8";
+@linei:@template"Q#@charset "utf-8";
 
 /* Reset | Eric Meyer's Reset (compressed)
  *---------------------------------------------------------------*/
@@ -327,7 +327,7 @@ body {
     -moz-border-radius: 10px;
     -moz-border-radius-bottomright: 0;
     -moz-border-radius-topleft: 0;
-    div.content p.copyright {
+    div.content div.copyright {
       float: right;
       padding: 0.5em 0.7em;
       margin: 1em 0 2em 0;
@@ -801,7 +801,7 @@ righto;;iH;;;@;i ;
 [ ;["#-moz-border-radius-bottomright;o;;;;@;"0o;;iR;;;@;i ;
 [ ;["-moz-border-radius-topleft;o;;;;@;"0o;;iS;;;@;i ;
 [ ;["text-align;o;;;;@;"
-right;["div.content p.copyright;o;;iF;[o;;[o;;iF;[o; 	;iF;["div;!0;"" o;';iF;["content;"@Ÿ;"@Ÿo;;iF;[o; 	;iF;["p;!0;"@Ÿo;';iF;["copyright;"@Ÿ;"@Ÿ;"@Ÿ;["#site-footer;o;;i7;[o;;[o;;i7;[o;(;i7;["site-footer;"" ;"@¶;"@¶;["#wrapper;o;;i†;[o;;[o;;i†;[o;(;i†;["wrapper;"" ;"@Â;"@Âo;;iU;0;@;[ ;
+right;["div.content div.copyright;o;;iF;[o;;[o;;iF;[o; 	;iF;["div;!0;"" o;';iF;["content;"@Ÿ;"@Ÿo;;iF;[o; 	;iF;["div;!0;"@Ÿo;';iF;["copyright;"@Ÿ;"@Ÿ;"@Ÿ;["#site-footer;o;;i7;[o;;[o;;i7;[o;(;i7;["site-footer;"" ;"@¶;"@¶;["#wrapper;o;;i†;[o;;[o;;i†;[o;(;i†;["wrapper;"" ;"@Â;"@Âo;;iU;0;@;[ ;
 [ ;0;"d	/* Site Header Structure
  	 *---------------------------------------------------------------*/o;;iX;0;@;[ ;
 [ ;0;"Y/* Nav Structure
